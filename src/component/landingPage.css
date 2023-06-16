@@ -1,0 +1,172 @@
+/* Base styles */
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    
+    clear: both;
+}
+
+
+/*header*/
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar_logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; 
+}
+
+.navbar ul {
+    margin-top: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.navbar ul li {
+    float: left;
+    padding: 0 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    .navbar ul li {
+      float: none;
+      display: block;
+    }
+    
+    .navbar_logo img {
+      float: none;
+      display: block;
+    }
+  }
+
+  /* Button */
+
+  .buttonSignup {
+    background-color: #33c038;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-shadow: 5px 1px 15px 3px rgba(29, 211, 105, 0.22); 
+box-shadow: 5px 1px 15px 3px rgba(0,0,0,0.22);
+  }
+  
+  .buttonSignin {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .buttonSignupBig {
+    background-color: #33c038;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 32px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-shadow: 5px 1px 15px 3px rgba(29, 211, 105, 0.22); 
+    box-shadow: 5px 1px 15px 3px rgba(0,0,0,0.22);
+    justify-content: center;
+    margin: 0px auto;
+    height: 75px;
+    width: 75%;
+    border-radius: 16px;
+  }
+
+ a[class^="button"]:hover{
+    background-color: #0a470c;
+ }
+
+  /* Logo Img */
+
+ section#logo {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ #logo img {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+ }
+
+ /* Footer */
+
+ footer {
+    position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(14, 196, 44, 0.8);
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  height: 20px;
+ }
