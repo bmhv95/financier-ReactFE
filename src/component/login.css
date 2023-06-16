@@ -1,0 +1,34 @@
+.formDiv{
+    width: 30%;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.formDiv .inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5px auto;
+}
+
+label{
+    margin: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button{
+    width: 30%;
+    padding: 5px;
+    margin: 5px auto;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 16px;
+}
