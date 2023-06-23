@@ -1,11 +1,12 @@
 import axios from "axios";
 import authHeader from "./authHeader";
+axios.defaults.headers.common["Authorization"] = authHeader();
 
-const API_URL = "http://localhost:8099/api/envelopes";
+const API_URL = "http://localhost:8080/api/envelopes";
 
 class envelopesService {
   getAllEnvelopes() {
-    return axios.get(API_URL, { headers: authHeader() });
+    return axios.get(API_URL);
   }
 
   createEnvelope(envelopeName, envelopeBudgetAmount) {
@@ -14,13 +15,12 @@ class envelopesService {
       {
         envelopeName,
         envelopeBudgetAmount,
-      },
-      { headers: authHeader() }
+      }
     );
   }
 
   getEnvelopeById(id) {
-    return axios.get(API_URL + "/" + id, { headers: authHeader() });
+    return axios.get(API_URL + "/" + id);
   }
 
   updateEnvelope(
@@ -35,13 +35,12 @@ class envelopesService {
         envelopeName,
         envelopeBudgetAmount,
         envelopeCurrentBalance,
-      },
-      { headers: authHeader() }
+      }
     );
   }
 
   deleteEnvelopeById(id) {
-    return axios.delete(API_URL + "/" + id, { headers: authHeader() });
+    return axios.delete(API_URL + "/" + id);
   }
 }
 

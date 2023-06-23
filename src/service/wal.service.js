@@ -1,7 +1,8 @@
 import axios from "axios";
 import authHeader from "./authHeader";
+axios.defaults.headers.common["Authorization"] = authHeader();
 
-const API_URL = "http://localhost:8099/api/wallets";
+const API_URL = "http://localhost:8080/api/wallets";
 
 export default class WalletsService {
     getAllWallets() {

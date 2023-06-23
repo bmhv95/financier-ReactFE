@@ -6,7 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./component/dashboard";
 import Login from "./component/login";
-
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
 const router = createBrowserRouter([
   {
     path: "/",
