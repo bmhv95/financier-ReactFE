@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-form {
+.formDiv form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,29 +14,26 @@ form {
 .formDiv .inputContainer{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     margin: 5px auto;
 }
 
-label{
+.formDiv label{
     margin: 5px;
     font-size: 16px;
     text-align: center;
 }
 
-input{
-    width: 70%;
-    padding: 5px;
+.formDiv input{
+    width: 100%;
     margin: 5px auto;
     text-align: center;
     border-radius: 16px;
 }
 
-button{
+.formDiv button{
     width: 30%;
-    padding: 5px;
-    margin: 5px auto;
+    margin: 10px auto;
     text-align: center;
-    background-color: aliceblue;
     border-radius: 16px;
 }

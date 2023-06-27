@@ -12,11 +12,11 @@ export default function EnvelopeBar(props) {
   let remaining = allocated - spent;
 
   function handleLabelClick() {
-    navigate("/");
+    navigate("#");
   }
 
   let MainBar = (
-    <ProgressBar className="envelope-mainbar" style={{ height: "100px" }}>
+    <ProgressBar className="envelope-mainbar" style={{ height: "99px" }}>
       <ProgressBar striped animated variant="primary" now={spentBar} />
       <ProgressBar striped animated variant="secondary" now={allocatedBar} />
       <ProgressBar striped animated variant="dark" now={budgetBar} />
@@ -24,7 +24,7 @@ export default function EnvelopeBar(props) {
   );
 
   let insideBudgetBar = (
-    <div className="inside-bar budget" onClick={() => handleLabelClick()}>
+    <div className="inside-bar budget" onClick={props.onBudgetBarClick}>
       <ProgressBar
         striped
         variant="dark"
@@ -37,7 +37,7 @@ export default function EnvelopeBar(props) {
   );
 
   let insideAllocatedBar = (
-    <div className="inside-bar allocated" onClick={() => handleLabelClick()}>
+    <div className="inside-bar allocated" onClick={() => alert("Allocate Edit")}>
       <ProgressBar
         striped
         variant="secondary"
@@ -50,7 +50,7 @@ export default function EnvelopeBar(props) {
   );
 
   let insideSpentBar = (
-    <div className="inside-bar spent" onClick={() => handleLabelClick()}>
+    <div className="inside-bar spent" onClick={() => alert("New Transaction")}>
       <ProgressBar
         striped
         variant="primary"
@@ -67,7 +67,7 @@ export default function EnvelopeBar(props) {
     spentBar = (spent / budget) * 100 - allocatedBar;
     budgetBar = 100 - allocatedBar - spentBar;
     MainBar = (
-      <ProgressBar className="envelope-mainbar" style={{ height: "100px" }}>
+      <ProgressBar className="envelope-mainbar" style={{ height: "99px" }}>
         <ProgressBar striped animated variant="warning" now={allocatedBar} />
         <ProgressBar striped animated variant="primary" now={spentBar} />
         <ProgressBar striped animated variant="dark" now={budgetBar} />
@@ -80,14 +80,14 @@ export default function EnvelopeBar(props) {
     spentBar = 100 - extraBar;
     overspent = spent - budget;
     MainBar = (
-      <ProgressBar className="envelope-mainbar" style={{ height: "100px" }}>
+      <ProgressBar className="envelope-mainbar" style={{ height: "99px" }}>
         <ProgressBar striped animated variant="danger" now={extraBar} />
         <ProgressBar striped animated variant="primary" now={spentBar} />
       </ProgressBar>
     );
 
     insideSpentBar = (
-      <div className="inside-bar spent" onClick={() => handleLabelClick()}>
+      <div className="inside-bar spent" onClick={() => alert("New Transaction")}>
         <ProgressBar style={{ height: "33px" }}>
           <ProgressBar
             striped
@@ -112,7 +112,7 @@ export default function EnvelopeBar(props) {
     <div className="envelope-bar">
       <div className="label-container">
         <p>
-          {name}: {remaining}
+          {remaining}
         </p>
       </div>
       {MainBar}

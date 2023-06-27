@@ -1,33 +1,21 @@
-/* .envelope-bar {
+/* /* .envelope-bar {
   position: relative;
   display: inline-block;
 } */
-
 .envelope {
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
   text-align: center;
-  border: 1px solid black;
-  border-radius: 16px;
-  margin: 3px;
+  padding: 4%;
+  height: 95%
 }
 
 .envelope-bar {
   position: relative;
-  flex: 100%;
-  height: 100%;
   width: 100%;
   padding: 0px 5%;
 }
 
-.envelope-flex{
-  display: flex;
-  flex-direction: column;
-  flex: 1
-}
-
 .bar-content {
-  color: #000;
   display: none;
   position: relative;
   z-index: 1;
@@ -35,16 +23,19 @@
 
 .envelope-bar:hover .bar-content {
   display: block;
+  cursor: pointer;
 }
 
 .envelope-bar:hover .envelope-mainbar {
   display: none;
 }
 
-.envelope-bar .label-container{
-  color: white;
+.envelope-bar .label-container {
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   font-size: 2em;
+  text-shadow: #000 1px 1px;
+  -webkit-font-smoothing: antialiased;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -57,10 +48,24 @@
   position: relative;
 }
 
-.inside-bar:hover{
+.inside-bar:hover {
   transition: transform 0.2s;
   z-index: 1;
   transform: scale(1.1);
   filter: drop-shadow(1px 1px 1px black);
 }
 
+.envelope-buttons>button::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inactive :not(#toggleActiveBtn){
+  filter: opacity(50%) grayscale(1);
+  pointer-events: none;
+}
+
+.inactive {
+  background-color: rgb(167, 165, 187);
+}

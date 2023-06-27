@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#contentAreaDiv{
+  padding: 100px 5% 0 5%; /* Adjust this value based on the height of your navbar */
+  margin-top: 0px; /* Use a negative margin to counteract the padding */
+}
+
+#walletNavBar:hover{
+  cursor: pointer;
+  filter: brightness(0.8);
+}

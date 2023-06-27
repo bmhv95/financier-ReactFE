@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./login.css";
-import authService from "../service/auth.service";
+import authService from "../../service/auth.service";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     authService.login(email, password)
     .then(()=>{
-      navigate('/dashboard');
+      navigate('/app');
     })
     .catch(()=>{
       alert("Invalid email or password");
@@ -48,7 +48,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary ">
           submit
         </button>
       </form>

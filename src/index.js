@@ -4,24 +4,34 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./component/dashboard";
-import Login from "./component/login";
-// Bootstrap CSS
+import NewEnvelope from "./component/newEnvelope";
+import LandingPage from "./component/landing/landingPage";
+import LoginPage from "./component/login/loginPage";
+import EditEnvelope from "./component/editEnvelope";
 import "bootstrap/dist/css/bootstrap.min.css";
-// Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import EnvelopesService from "./service/env.service";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard />
+    element: <LandingPage />
   },
   {
     path: "/login",
-    element: <Login />
+    element: <LoginPage />
+  },
+  {
+    path: "/app",
+    element: <App />
+  },
+  {
+    path: "/envelopes/new",
+    element: <NewEnvelope />
+  },
+  {
+    path: "/envelopes/edit",
+    element: <EditEnvelope />
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById("root"));

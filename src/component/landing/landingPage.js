@@ -1,6 +1,7 @@
 import "./landingPage.css";
-import Logo from "../img/Logo.png";
-import MoneyLogo from "../img/MoneyLogo.png";
+import Logo from "../../img/Logo.png";
+import MoneyLogo from "../../img/MoneyLogo.png";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -25,12 +26,12 @@ export default function LandingPage() {
                 <a href="#">Budgeting</a>
               </li>
             </ul>
-            <a href="#" className="buttonSignup">
+            <Link to ="/login" className="buttonSignup">
               Sign Up
-            </a>
-            <a href="#" className="buttonSignin">
+            </Link>
+            <Link to ="/login" className="buttonSignin">
               Sign In
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
